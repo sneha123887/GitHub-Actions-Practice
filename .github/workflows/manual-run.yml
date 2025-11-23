@@ -1,1 +1,12 @@
+name: Manual Run Example
 
+on:
+  workflow_dispatch:
+
+jobs:
+   test:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Say Hello
+           run: echo "Manual workflow trigerred successfully!"
+           
