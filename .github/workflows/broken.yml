@@ -1,14 +1,14 @@
-name: Broken Workflow
+name: Broken Workflow Fixed
 
 on: [push]
 
 jobs:
    build:
-     runs-on: ubuntu
+     runs-on: ubuntu-latest
 
    steps:
    -  name: Checkout
-      uses: checkout@v3
+      uses: actions/checkout@v3
 
    -  name: Say hi
-      uses: echo "This workflow is broken on purpose!"
+      run: echo "This workflow is broken on purpose!"
