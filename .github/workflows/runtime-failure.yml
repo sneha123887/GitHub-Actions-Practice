@@ -1,1 +1,17 @@
+name: Runtime Failure Example
 
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run failing command
+        uses: |
+          echo "This command will fail"
+          notacommand123
