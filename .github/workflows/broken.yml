@@ -1,1 +1,14 @@
+name: Broken Workflow
 
+on: [push]
+
+jobs:
+   build:
+     runs-on: ubuntu
+
+   steps:
+   -  name: Checkout
+      uses: checkout@v3
+
+   -  name: Say hi
+      uses: echo "This workflow is broken on purpose!"
